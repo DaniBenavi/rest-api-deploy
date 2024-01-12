@@ -1,13 +1,14 @@
 import { readJSON } from '../utils.js'
 import { randomUUID } from 'node:crypto'
-const movies = readJSON('../movies.json')
+const movies = readJSON('./movies.json')
 
 export class MovieModel {
   // Get all movies
   static async getAll({ genre }) {
     if (genre) {
-      return movies.filter(m => m.genre.some(g => g.toLowerCase() === genre.toLowerCase()))
+      return movies.filter(movie => movie.genre.some(g => g.toLowerCase() === genre.toLowerCase()))
     }
+
     return movies
   }
 
@@ -18,13 +19,13 @@ export class MovieModel {
   }
 
   // get the movie for genre
-  static async gatByGenre({ genre }) {
+  static async getByGenre({ genre }) {
     const movie = movies.find(movie => movie.id === genre)
     return movie
   }
 
   // create a new movie
-  static async create({ input }) {
+  static async createMovie({ input }) {
     const newMovie = {
       id: randomUUID(),
       ...input
@@ -36,7 +37,7 @@ export class MovieModel {
   }
 
   // Delete a movie
-  static async delete({ id }) {
+  static async deleteMovie({ id }) {
     const movieIndex = movies.findIndex(movie => movie.id === id)
     if (movieIndex === -1) return false
     movies.splice(movieIndex, 1)
@@ -44,13 +45,15 @@ export class MovieModel {
   }
 
   // update the movie
-  static async update({ id, input }) {
+  static async updateMovie({ id, input }) {
     const movieIndex = movies.findIndex(movie => movie.id === id)
     if (movieIndex === -1) return false
+
     movies[movieIndex] = {
       ...movies[movieIndex],
       ...input
     }
+
     return movies[movieIndex]
   }
 }

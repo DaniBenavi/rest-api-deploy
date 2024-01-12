@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 })
 
 // todos los recursos que sean Movies se identifica con /movies
-app.use('movies', moviesRouter)
+app.use('/movies', moviesRouter)
 
 const port = process.env.PORT ?? 1234
 
