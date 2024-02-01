@@ -3,10 +3,11 @@
 GET http://localhost:1234/movies
 
 ### Peliculas por Id
-GET http://localhost:1234/movies/b470068c-b3d1-4ead-9df4-a55d97a4f8c4
+GET http://localhost:1234/movies/260772c0-bf69-11ee-9c5e-b05cda3bf706
+
 
 ###Peliculas por genero
-GET http://localhost:1234/movies?genre=acTion
+GET http://localhost:1234/movies?genre=action
 
 ###Create a new movie
 POST http://localhost:1234/movies
@@ -14,8 +15,8 @@ Content-Type: application/json
 
 {
   "sql": "SELECT * FROM users",
-  "title": "The Godfather 4",
-  "year": 1985,
+  "title": "The Godfather revolution 2",
+  "year": 2000,
   "director": "Francis Ford Coppola",
   "duration": 175,
   "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
