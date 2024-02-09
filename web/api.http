@@ -3,7 +3,7 @@
 GET http://localhost:1234/movies
 
 ### Peliculas por Id
-GET http://localhost:1234/movies/260772c0-bf69-11ee-9c5e-b05cda3bf706
+GET http://localhost:1234/movies/42ebbc00-0d57-41ee-bdfe-6b9d455d664e
 
 
 ###Peliculas por genero
