@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start:mysql": "node --watch server-with-mysql.js",
-    "start:local": "node --watch server-with-local.js",
+    "start": "node --watch server-with-local.js",
     "start:postgres": "node --watch server-with-postgresql.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,5 +28,9 @@
   },
   "devDependencies": {
     "standard": "^17.1.0"
+  },
+  "include": {
+    "api": "./api/index.ts"
   }
+  
 }
