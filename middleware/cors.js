@@ -3,7 +3,8 @@ const ACCEPTED_ORIGINS = [
   'http://localhost:8080',
   'http://localhost:1234',
   'http://127.0.0.1:3000',
-  'https://rest-api-deploy-bpxpwp2ur-danibenavis-projects.vercel.app/'
+  'https://rest-api-deploy-bpxpwp2ur-danibenavis-projects.vercel.app/',
+  'https://rest-api-deploy-eta.vercel.app/'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
